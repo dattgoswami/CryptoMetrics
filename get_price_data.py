@@ -85,11 +85,15 @@ if __name__ == "__main__":
     # get_assets()
     # get_available_metrics()
     # if we do not want to pass in the arguments and want to use variables we can set these values
-    # start_date = "2021-10-10"
-    # end_date = "2021-10-13"
-    # assets = ["uni", "luna", "mkr"]
-    # metric_id = "price"
-    # """
+    """
+    start_date = "2021-10-10"
+    end_date = "2021-10-13"
+    assets = ["uni", "luna", "mkr"]
+    metric_id = "price"
+    dataframe = get_historical_asset_price_data(
+    assets, metric_id, start_date, end_date)
+    print(dataframe)
+    """
     assets = []
     if len(sys.argv) < 5:
         print("please enter appropriate arguments start date, end date, metric and the symbol of the assets \
