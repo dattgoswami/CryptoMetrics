@@ -6,12 +6,13 @@ Simple module to extract, transform and return historical asset price data using
 ## Explanation
 
 The get_historical_asset_price_data will be called if there are enough arguments passed by the user. We are passing the assets list, metric to be fetched, start date and the end date. In the function we are looping through the assets list and fetching the data for those using the api call. We are converting the time value from millisecond to second and converting it to date in the format that we need and storing it into a date_values list to be assigned to the final dataframe as an index. The asset price dictionary has the data for each asset with a list of prices which is being passed to the data frame. The function returns a dataframe with the format:
-LUNA MKR UNI
+```
+                LUNA         MKR       UNI
 2021-10-10 42.480616 2572.055860 25.128790
 2021-10-11 39.280661 2460.887011 24.206328
 2021-10-12 39.151339 2448.782439 24.158782
 2021-10-13 37.545284 2441.295271 23.447305
-
+```
 These are the endpoints being used:
 
 1. [https://data.messari.io/api/v1/assets/yfi/metrics/price/time-series?start=2021-01-01&end=2021-02-01&interval=1d]
