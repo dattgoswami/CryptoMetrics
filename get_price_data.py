@@ -90,13 +90,14 @@ if __name__ == "__main__":
     # assets = ["uni", "luna", "mkr"]
     # metric_id = "price"
     # """
+    assets = []
     if len(sys.argv) < 5:
         print("please enter appropriate arguments start date, end date, metric and the symbol of the assets \
         you would like to get the data for")
     else:
         start_date = sys.argv[1]
         end_date = sys.argv[2]
-        metric = sys.argv[3]
+        metric_id = sys.argv[3]
         for i in range(4, len(sys.argv)):
             assets.append(sys.argv[i])
 
