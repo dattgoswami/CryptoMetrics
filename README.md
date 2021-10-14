@@ -20,7 +20,13 @@ These are the endpoints being used:
 
 ## Usage
 
-Once you have cloned the project navigate to the projects directory and run:
+Once you have cloned the project
+
+```
+git clone https://github.com/dattgoswami/test_solution_5.git
+```
+
+navigate to the projects directory and run:
 
 ```
 python get_price_data.py start_date end_date metric_id asset1 asset2
